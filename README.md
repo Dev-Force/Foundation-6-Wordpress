@@ -21,5 +21,7 @@ gulp serve
 gulp serve --production
 ```
 
+Finally you can check out the config.json file that keeps the variables that are responsible for the input and the output of the gulp tasks as well as the wordpress base asset directories
+
 ## P.S.
 Wordpress functions are setup so that they use the production version of ur theme.
