@@ -158,9 +158,23 @@ gulp.task('scripts', function() {
     .pipe(rename('preloader.min.js'))
     .pipe(gulp.dest('./' + config.paths.output + '/js'));
 
-    // All js scripts inside scripts folder
+    // standalone folder
+    gulp.src([
+        config.paths.assets + '/scripts/standalone/**/*.js'
+    ])
+    .pipe(babel({
+        presets: ['es2015'],
+        compact: true
+    }))
+    .pipe(gulp.dest('./' + config.paths.output + '/js'))
+    .pipe(gulpif(argv.production, rename({suffix: '.min'})))
+    .pipe(gulpif(argv.production, uglify()))
+    .pipe(gulp.dest('./' + config.paths.output + '/js'));
+
+    // All js scripts inside scripts folder except standalone folder
     return gulp.src([
-        config.paths.assets  + '/scripts/**/*.js'
+        config.paths.assets + '/scripts/**/*.js',
+        '!' + config.paths.assets + '/scripts/standalone/**/*.js'
     ])
     .pipe(babel({
         presets: ['es2015'],
