@@ -1,0 +1,7 @@
+{
+    "paths": {
+        "bower" : "./bower_components",
+        "assets": "./assets",
+        "output": "dist"
+    }
+}

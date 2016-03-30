@@ -1,0 +1,23 @@
+{
+  "name": "Foundation-6-Wordpress",
+  "authors": [
+    "Tsaganos Tolis <apostolos94@gmail.com>"
+  ],
+  "description": "Foundation-6-Wordpress",
+  "main": "",
+  "moduleType": [],
+  "license": "Apache-2.0",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "foundation-sites": "^6.2.0",
+    "motion-ui": "^1.2.2"
+  }
+}
